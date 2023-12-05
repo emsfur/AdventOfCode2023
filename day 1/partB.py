@@ -3,6 +3,8 @@ data = [val.strip("\n") for val in file.readlines()]
 file.close()
 sum = 0
 
+# nineight
+
 numConversion = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"}
 
 checkArr = ["one", "1", "two", "2", "three", "3", "four", "4", "five", "5", "six", "6", "seven", "7", "eight", "8", "nine", "9"]
@@ -15,8 +17,8 @@ for line in data:
     
 
     for check in checkArr:
-        firstCheck = line.find(check)
-        lastCheck = line.rfind(check)
+        firstCheck = line.find(check) # gets the index of the first instance of number (-1 if not found)
+        lastCheck = line.rfind(check) # gets the index of the last instance of number (-1 if not found)
 
         # check if there's a digit/string number index more closer to the start (cover for -1 if substring not found)
         if (firstCheck != -1 and firstCheck < numIdx[0]):
