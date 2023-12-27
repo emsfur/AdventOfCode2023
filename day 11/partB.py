@@ -1,10 +1,13 @@
+# all the code stays the same except the spaceTimeDist value
+
 file = open("data.txt", "r")
 data = [val.strip("\n") for val in file.readlines()]
 file.close() 
 
 sumPaths = 0
-# add 1 extra space gap when crossing empty rows/cols
-spaceTimeDist = 1 
+# add custom gap distance (-1 since it replaces instead of adding on)
+# distance algo already accounts for original gap
+spaceTimeDist = 999999 
 
 # first manage the expansion by counting blank rows/cols
 emptyRows = []
